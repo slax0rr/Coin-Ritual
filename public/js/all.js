@@ -52,8 +52,8 @@ function onMessage(data)
     $(".pair-in-run").empty();
     var obj = JSON.parse(data);
     var clone = $(".pair-placeholder").clone().show();
-    clone.find(".warrior1 span").text(obj.warrior1.name + " of " + obj.hunter.galaxy);
-    clone.find(".warrior2 span").text(obj.warrior2.name + " of " + obj.hunter.galaxy);
+    clone.find(".warrior1 span").text(obj.warrior1.rank + " " + obj.warrior1.name +  " (" + obj.warrior1.bloodname + ") of " + obj.hunter.galaxy);
+    clone.find(".warrior2 span").text(obj.warrior2.rank + " " + obj.warrior2.name +  " (" + obj.warrior2.bloodname + ") of " + obj.hunter.galaxy);
     $(".pair-in-run").append(clone);
     setTimeout(function() {
         $(".oathmaster-result").html("Hunter: " + obj.hunter.name + " of " + obj.hunter.galaxy + "<br />Hunted: " +

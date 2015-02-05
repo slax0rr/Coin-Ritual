@@ -11,12 +11,22 @@ class Warrior
      */
     protected $id;
     /**
+     * @column (type="string", options={"default" = "MechWarrior"})
+     * @var string
+     */
+    protected $rank;
+    /**
      * @Column (type="string")
      * @var string
      */
     protected $name;
     /**
      * @Column (type="string")
+     * @var string
+     */
+    protected $bloodname;
+    /**
+     * @Column (type="string", options={"default" = ""})
      * @var string
      */
     protected $galaxy;
@@ -37,6 +47,17 @@ class Warrior
         return $this->id;
     }
 
+    public function getRank()
+    {
+        return $this->rank;
+    }
+
+    public function setRank($rank)
+    {
+        $this->rank = $rank;
+        return $this;
+    }
+
     public function getName()
     {
         return $this->name;
@@ -45,6 +66,17 @@ class Warrior
     public function setName($name)
     {
         $this->name = $name;
+        return $this;
+    }
+
+    public function getBloodname()
+    {
+        return $this->bloodname;
+    }
+
+    public function setBloodname($bloodname)
+    {
+        $this->bloodname = $bloodname;
         return $this;
     }
 

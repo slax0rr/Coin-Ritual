@@ -1,7 +1,3 @@
-# Framework
-Install:
-```
-composer create-project -s dev slaxweb/framework
-```
+# Clan Wolf Trial of Bloodright, Coin Ritual
 
-It has only a router and a view library. Everything else is up to you.
+Nothing to see here, move along.

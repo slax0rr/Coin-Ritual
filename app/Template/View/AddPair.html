@@ -1,0 +1,23 @@
+<form id="addpair" class="auto-form" action="addpair" method="POST">
+    Choose warrior one:
+    <select name="warrior1">
+        <option value="0">Select...</option>
+        {% for warrior in warriorList %}
+            <option value="{{ warrior.getId() }}">{{ warrior.getName() }}</option>
+        {% endfor %}
+    </select>
+    <br />
+    <br />
+    Choose warrior two:
+    <select name="warrior2">
+        <option value="0">Select...</option>
+        {% for warrior in warriorList %}
+            <option value="{{ warrior.getId() }}">{{ warrior.getName() }}</option>
+        {% endfor %}
+    </select>
+    <br />
+    <br />
+    <input type="submit" value="Start the ritual">
+</form>
+<div class="status"></div>
+<div class="oathmaster-result"></div>
